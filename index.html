@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acceso a Sitio Web</title>
+</head>
+<body>
+  <h1>Redirigiendo...</h1>
+  <script type="text/javascript">
+    // Obtén el URL de destino desde un parámetro de la URL
+    var targetUrl = new URLSearchParams(window.location.search).get('url');
+
+    // Si no se proporciona un URL, redirige a una página predeterminada
+    if (!targetUrl) {
+      targetUrl = 'https://www.ejemplo.com'; // URL predeterminada
+    }
+
+    // Redirige al sitio especificado
+    window.location.href = targetUrl;
+  </script>
+</body>
+</html>
