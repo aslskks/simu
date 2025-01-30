@@ -8,16 +8,12 @@
 <body>
   <h1>Redirigiendo...</h1>
   <script type="text/javascript">
-    // Obtén el URL de destino desde un parámetro de la URL
-    var targetUrl = new URLSearchParams(window.location.search).get('url');
+   // Cambiar headers HTTP para evadir filtrado
+const headers = new Headers();
+headers.append('User-Agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36');
+headers.append('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8');
+headers.append('Upgrade-Insecure-Requests', '1');
 
-    // Si no se proporciona un URL, redirige a una página predeterminada
-    if (!targetUrl) {
-      targetUrl = 'https://www.ejemplo.com'; // URL predeterminada
-    }
-
-    // Redirige al sitio especificado
-    window.location.href = targetUrl;
   </script>
 </body>
 </html>
